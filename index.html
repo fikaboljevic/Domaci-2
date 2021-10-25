@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-10 offset-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Odgledan</th>
+                            <th>Naziv</th>
+                            <th>Godina</th>
+                            <th>Država</th>
+                            <th>Glumci</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movies_table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            
+        <div class="row mt-3">
+            <div class="col-3 offset-1">
+                <button class="btn btn-success" id="movie_button" data-bs-toggle="modal" data-bs-target="#form_modal">Dodaj novi film</button>
+                <div class="modal" id="form_modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h4 class="modal-tittle ">Dodaj novi film</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss='modal'></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="">
+                                    
+                                        <label for="new_watched" class="form-label">Da li si odgledao film?</label>
+                                        <input type="text" class="form-control mb-2" id="new_watched" value="false" required>
+                                        <div class="invalid-feedback">Potrebno popuniti !</div>
+                                    
+                                    
+                                        <label for="new_name" class="form-label">Ime filma:</label>
+                                        <input type="text" class="form-control mb-2" id="new_name" required>
+                                        <div class="invalid-feedback">Potrebno popuniti !</div>
+                                    
+                                    
+                                        <label for="new_year" class="form-label">Iz koje godine je film?</label>
+                                        <input type="number" class="form-control mb-2" id="new_year" min="1930" max ="2021" placeholder="godina izmedju 1930 i 2021.." required>
+                                        <div class="invalid-feedback">Potrebno popuniti !</div>
+                                    
+                                    
+                                        <label for="new_country" class="form-label">Iz koje drzava je film?</label>
+                                        <input type="text" class="form-control mb-2" id="new_country" required>
+                                        <div class="invalid-feedback">Potrebno popuniti !</div>
+                                    
+                                        <label for="new_actors" class="form-label">Ko glumi u filmu?</label>
+                                        <input type="text" class="form-control mb-2" id="new_actors" required>
+                                        <div class="invalid-feedback">Potrebno popuniti !</div>
+                                    
+                                        <input type="submit" class="btn btn-success mt-3" value="Dodaj u tabelu" id="add_button">
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
